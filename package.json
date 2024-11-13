@@ -1,0 +1,22 @@
+{
+  "name": "highlighter",
+  "version": "1.0.0",
+  "description": "A Chrome extension that highlights web UI that has specified classes or class prefixes.",
+  "main": "background.js",
+  "scripts": {
+    "clean": "rm -rf node_modules && npm install",
+    "build": "npx vite build",
+    "dev": "npx vite build --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.0",
+    "vite": "^5.4.11"
+  }
+}

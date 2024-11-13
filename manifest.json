@@ -1,9 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Highlighter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Highlights elements on the page based on class names or prefixes.",
-  "permissions": ["scripting", "storage"],
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -15,7 +16,7 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Highlighter"
-  },
-  "options_page": "options.html"
+    "default_title": "Highlighter",
+    "default_popup": "dist/popup.html"
+  }
 }
