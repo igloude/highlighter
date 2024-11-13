@@ -3,7 +3,7 @@
   "name": "Highlighter",
   "version": "0.1.0",
   "description": "Highlights elements on the page based on class names or prefixes.",
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "storage"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],

@@ -1,6 +1,9 @@
 document.getElementById("save").addEventListener("click", () => {
-  const classes = document.getElementById("classes").value.split(",");
-  const prefixes = document.getElementById("prefixes").value.split(",");
+  const classesValue = document.getElementById("classes").value.trim();
+  const prefixesValue = document.getElementById("prefixes").value.trim();
+
+  const classes = classesValue ? classesValue.split(",") : null;
+  const prefixes = prefixesValue ? prefixesValue.split(",") : null;
 
   chrome.storage.sync.set({ classes, prefixes }, () => {
     alert("Options saved!");
