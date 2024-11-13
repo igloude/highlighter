@@ -50,14 +50,12 @@ function highlightElements(classesToMatch, prefixesToMatch) {
   );
 }
 
-// Function to get stored terms and apply highlighting
 function applyHighlighting() {
   chrome.storage.sync.get(["classes", "prefixes"], ({ classes, prefixes }) => {
     highlightElements(classes, prefixes);
   });
 }
 
-// Initial highlighting when content script loads
 applyHighlighting();
 
 // Listen for changes in storage and reapply highlighting

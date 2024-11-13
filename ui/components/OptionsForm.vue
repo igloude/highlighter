@@ -103,7 +103,7 @@ export default {
     },
   },
   mounted() {
-    this.loadOptions(); // Load existing options without saving immediately
+    this.loadOptions();
   },
 };
 </script>
